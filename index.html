@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/eae419465a.js" crossorigin="anonymous"></script>
+    <title>Payment Donation</title>
+    <link rel ="stylesheet" href="css/test.css">
+</head>
+<body>
+    <nav class='navbar'>
+        <div class="brand">
+            <i style=" margin:0px 30px; font-size:40px; color:white; "  class="fas fa-people-carry"></i>
+            <span>Help The Poor</span>
+            
+        </div>
+        <!-- Toggle button -->
+        <a href="#" class='toggle-btn'>
+            <span class='bar'></span>
+            <span class='bar'></span>
+            <span class='bar'></span>
+        </a>
+        <div class="nav-links">
+            <ul id='navLinks'>
+              <li class='btn active-btn'><a href="#">Home</a></li>  
+              <li class='btn'><a href="About.html" >About</a></li>
+              <li class='btn'><a href="contact us.html" >Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+     
+    <div class="container">
+        <h1> Let's Donate For Cause </h1>
+        <big>" Be A Symbol Of Hope For Those Who Are Waiting "</big>
+        <br>
+        <a>
+            <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_GaeSlC2tUFey5j" async> </script> </form>
+        </a>
+    </div>
+
+
+    <!-- Script to add active class to nav links -->
+    <script>
+        const toggleBtn=document.getElementsByClassName('toggle-btn')[0];
+        const navbarLinks=document.getElementsByClassName('nav-links')[0];
+        toggleBtn.addEventListener('click',()=>{
+            navbarLinks.classList.toggle('active');
+        })
+        var header = document.getElementById("navLinks");
+            var btns = header.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function () {
+                    var current = document.getElementsByClassName("active-btn");
+                    current[0].className = current[0].className.replace(" active-btn", "");
+                    this.className += " active-btn";
+                    navbarLinks.classList.toggle('active');
+                });
+            }
+
+    </script>
+    
+</body>
+</html>
+

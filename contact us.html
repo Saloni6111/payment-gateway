@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/eae419465a.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/About.css" type="text/css"> 
+    <title>Contact Us</title>
+
+</head>
+
+<body>
+
+    <nav class='navbar'>
+        <div class="brand">
+            <i style=" margin:0px 30px; font-size:40px; color:white; "  class="fas fa-people-carry"></i>
+            <span>Help The Poor</span>
+            
+        </div>
+        <!-- Toggle button -->
+        <a href="#" class='toggle-btn'>
+            <span class='bar'></span>
+            <span class='bar'></span>
+            <span class='bar'></span>
+        </a>
+        <div class="nav-links">
+            <ul id='navLinks'>
+              <li class='btn '><a href="index.html">Home</a></li>  
+              <li class='btn '><a href="About.html" >About</a></li>
+              <li class='btn active-btn'><a href="#" >Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+        <div class="outer">
+         <div class="box">
+            <h2>Welcome To Our Contact Page</h2>
+            <hr style="color: white; width: 40%; height: 2px;">
+            <h3>Hello Helpers !!</h3>
+       <p> we are very happy to see you Here . welcome to our website we are very happy to tell you that 
+        we are helping some poor peoples .<br> If you are interested you can donate according to your happiness.
+	   If you want to join us or have any Query you can contact us.<br> <br> Contact us through Email or call us :-
+    <br> <big>Email: contact@programming.test</big><br>
+     <big>Phone: (+91) 555-5555</big>
+        
+            </div>
+
+        </div>
+
+    <script>
+        const toggleBtn=document.getElementsByClassName('toggle-btn')[0];
+        const navbarLinks=document.getElementsByClassName('nav-links')[0];
+        toggleBtn.addEventListener('click',()=>{
+            navbarLinks.classList.toggle('active');
+        })
+        var header = document.getElementById("navLinks");
+            var btns = header.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function () {
+                    var current = document.getElementsByClassName("active-btn");
+                    current[0].className = current[0].className.replace(" active-btn", "");
+                    this.className += " active-btn";
+                    navbarLinks.classList.toggle('active');
+                });
+            }
+
+    </script>
+</body>
+
+</html>

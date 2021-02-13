@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/eae419465a.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/About.css" type="text/css"> 
+    <title>About</title>
+
+</head>
+
+<body>
+
+    <nav class='navbar'>
+        <div class="brand">
+            <i style=" margin:0px 30px; font-size:40px; color:white; "  class="fas fa-people-carry"></i>
+            <span>Help The Poor</span>
+            
+        </div>
+        <!-- Toggle button -->
+        <a href="#" class='toggle-btn'>
+            <span class='bar'></span>
+            <span class='bar'></span>
+            <span class='bar'></span>
+        </a>
+        <div class="nav-links">
+            <ul id='navLinks'>
+              <li class='btn '><a href="index.html">Home</a></li>  
+              <li class='btn active-btn'><a href="#" >About</a></li>
+              <li class='btn'><a href="contact us.html" >Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+        <div class="outer">
+         <div class="box">
+            <h2>Help The Poor</h2>
+            <hr style="color: white; width: 40%; height: 2px;">
+
+            <p>
+                On one hand, there are people who live their life lavishly. They are not only enjoying the joy of essentials but also have what they want and desire; a luxurious living providing them an extra comfort. On the other hand, there are people who cannot even afford the basic requirements of living. They do not have shelter to live, food to eat, and clothes to wear.People who have extra are living a comfortable and a posh life. While those who have barely the vitals are fighting each day for life.They fail to meet the basic requirements.
+
+There are people who have much more than they need to live while others have barely enough to survive.
+
+Poor people do not have enough clothing, food, education and healthcare. Being poor means deprived economically, politically and socially. They hardly get opportunities. They have inadequate nutrition, higher risk of diseases and lack access to healthcare and basic essentials for living resulting in low achievement.
+
+One cannot make such people opulent but can at least help them achieve the essentials of life and lead a prosperous life. Helping the poor and needy people is a good deed. Caring for the poor and needy people and helping them is a noble endeavor. The more you give to poor and needy people, the more you strengthen their dependency. If you give them the chance or opportunity, you’ll see an effective and long-lasting improvement in their lives. Create a new system built on inter-dependency which motivates them to work and move forward and their dignity is maintained. Tossing out money or other kinds of donation do help the poor and needy people but the need is to direct 
+your energies and efforts in raising them, building relationship, teaching them and moreover, regaining their self-confidence and self-esteem to work for themselves.
+
+Change your perspective.
+                Individuals can help the poor and needy people monetarily also. Providing financial assistance to the poor can help them solve the basic problems of living. By providing money to the poor and needy people, they can get the essentials of living. One can get associated with charitable houses and donate money there to help the needy.
+                 By providing monetary help to the needy people, they can get meal for their family,
+                  a place to live or some clothes.</p>
+            </div>
+
+        </div>
+
+    <script>
+        const toggleBtn=document.getElementsByClassName('toggle-btn')[0];
+        const navbarLinks=document.getElementsByClassName('nav-links')[0];
+        toggleBtn.addEventListener('click',()=>{
+            navbarLinks.classList.toggle('active');
+        })
+        var header = document.getElementById("navLinks");
+            var btns = header.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function () {
+                    var current = document.getElementsByClassName("active-btn");
+                    current[0].className = current[0].className.replace(" active-btn", "");
+                    this.className += " active-btn";
+                    navbarLinks.classList.toggle('active');
+                });
+            }
+
+    </script>
+</body>
+
+</html>
